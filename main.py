@@ -57,5 +57,6 @@ pdf_files = find_pdfs(input_directory)
 convert_pdfs_to_pngs(pdf_files, output_directory, dpi=600)
 
 # Display one of the converted images and handle clicks
-# example_image_path = os.path.join(output_directory, 'example_page_1.png')
+# example_image_path = os.path.join(output_directory, '2410093YKBX5X2_page_1.png')
 # show_image_with_click_location(example_image_path)
+ 

@@ -32,7 +32,7 @@ def crop_and_show(image_path, regions):
                 print(f"Detected Shopee Barcode: {barcode_value}")
 
         # If region is Destination Zone, COD Amount, Shopee Barcode, rotate 270 degrees
-        if region_name in ["Destination Zone", "COD Amount", "Shopee Barcode"]:
+        if region_name in ["Destination Zone", "Shopee Barcode"]:
             cropped_image = cv2.rotate(cropped_image, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
         # Save the cropped image
@@ -55,13 +55,13 @@ def crop_and_show(image_path, regions):
 # Define the regions with their coordinates in percentages
 regions = {
     "Shopee Barcode": [(4.80 / 100, 30.48 / 100), (65.36 / 100, 38.55 / 100)],
-    "Shopee Logo": [(2.10 / 100, 1.14 / 100), (51.24 / 100, 10.29 / 100)],
-    "Courier Barcode": [(51.06 / 100, 0.00 / 100), (98.57 / 100, 11.10 / 100)],
-    "Courier QR Code": [(3.45 / 100, 38.90 / 100), (17.71 / 100, 48.80 / 100)],
+    "Shopee Logo": [(1.84 / 100, 1.15 / 100), (51.12 / 100, 10.52 / 100)],
+    "Courier Barcode": [(50.70 / 100, 0.00 / 100), (98.71 / 100, 11.03 / 100)],
+    "Courier QR Code": [(2.30 / 100, 39.23 / 100), (16.74 / 100, 49.32 / 100)],
     "Sender Address": [(2.78 / 100, 11.44 / 100), (73.38 / 100, 19.47 / 100)],
     "Receiver Address": [(3.09 / 100, 20.05 / 100), (73.46 / 100, 30.07 / 100)],
-    "Destination Zone": [(29.80 / 100, 39.00 / 100), (72.92 / 100, 46.05 / 100)],
-    "COD Amount": [(74.09 / 100, 22.59 / 100), (96.29 / 100, 28.22 / 100)],
+    "Destination Zone": [(21.19 / 100, 39.49 / 100), (79.25 / 100, 46.39 / 100)],
+    "COD Amount": [(74.09 / 100, 11.79 / 100), (96.29 / 100, 38.49 / 100)],
 }
 
 def find_main_output(input_dir):
